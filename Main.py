@@ -8,6 +8,38 @@
 # -  We're on the right track here, how many seconds are in a day
 # - How many Hours are in the month of June? 
 # - How many Minutes are in the month of August?
+
+class Time:
+    def min_to_sec(min):
+        seconds = min * 60
+        print(seconds)
+
+    min_to_sec(5)
+
+    def hour_to_sec(hours):
+        seconds = hours * 3600
+        print(seconds)
+
+    hour_to_sec(24)
+
+    def days_to_hours(days):
+        hours = days * 24
+        print(hours)
+
+    days_to_hours(30)
+
+    def hours_to_min(hours):
+        min = hours * 60
+        print(min)
+
+    hours_to_min(744)
+
+
+
+    # 86,400 seconds in a day
+    # 720 hours in a month
+    # 44,640 min in August
+
  
  
  # Bonus -> Without singing the old showtune in your head, how many Minutes are there in a year? 
@@ -28,6 +60,19 @@
 
 # ---------------------------------
 #      Solution Goes Here ->
+
+def return_middle_letter(string):
+    length = len(string)
+    if length % 2 == 0:
+        print('String has even number of letters.')
+    else:
+        middle_index = length // 2
+        print(string[middle_index])
+
+return_middle_letter('sebastian')
+
+return_middle_letter('sebastiann')
+
 # ---------------------------------
 
 
@@ -37,6 +82,15 @@
 
 # ---------------------------------
 #      Solution Goes Here ->
+
+def hide_card_number(cardnum):
+    length = len(cardnum)
+    hidden_nums = '*' * (length - 4)
+    show_nums = cardnum[-4:]
+
+    print(hidden_nums + show_nums)
+
+hide_card_number('1234567894444')
 # ---------------------------------
 
 
@@ -63,6 +117,23 @@
 
 # ---------------------------------
 #      Solution Goes Here ->
+
+def online_count(statuses):
+    online = 0
+    for status in statuses.values():
+        if status == "online":
+            online += 1
+    return online
+
+statuses = {
+    "John": "online",
+    "Paul": "offline",
+    "George": "online",
+    "Ringo": "offline"
+}
+
+num_online = online_count(statuses)
+print(f"Number of people online: {num_online}")
 # ---------------------------------
 
 
@@ -73,6 +144,14 @@
 
 # ---------------------------------
 #      Solution Goes Here ->
+
+def give_discount(price, discount):
+    amt_off = price * (discount * 0.01)
+    new_price = price - amt_off
+    print(new_price)
+
+give_discount(100, 20)
+
 # ---------------------------------
 
 
@@ -84,6 +163,16 @@
 
 # ---------------------------------
 #      Solution Goes Here ->
+
+def pythagorean(adjacent, opposite):
+    a_square = adjacent * adjacent
+    b_square = opposite * opposite
+    c_square = a_square + b_square
+    hypotenuse = c_square ** 0.5
+    print(hypotenuse)
+
+pythagorean(4, 4)
+
 # ---------------------------------
 
 
@@ -97,4 +186,15 @@
 
 # ---------------------------------
 #      Solution Goes Here ->
+
+def fibonacci(num1, num2):
+    numbers = [num1, num2]
+    while len(numbers) < 9:
+        next_number = numbers[-1] + numbers[-2]
+        numbers.append(next_number)
+
+    print(numbers)
+
+fibonacci(1, 1)
+
 # ---------------------------------
